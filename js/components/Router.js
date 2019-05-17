@@ -7,6 +7,7 @@ import PageQuadrant from './PageQuadrant';
 import PageItem from './PageItem';
 import PageItemMobile from './PageItemMobile';
 import { quadrants, getItemPageNames, isMobileViewport } from '../../common/config';
+import Radar from './Radar';
 
 const getPageByName = (items, pageName) => {
   if (pageName === 'index') {
@@ -20,6 +21,9 @@ const getPageByName = (items, pageName) => {
   }
   if (pageName === 'aoe-toolbox') {
     return PageToolbox;
+  }
+  if (pageName === 'radar') {
+    return Radar;
   }
   if (quadrants.includes(pageName)) {
     return PageQuadrant;
